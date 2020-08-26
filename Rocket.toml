@@ -1,2 +1,0 @@
-[global.databases]
-user_db = { url = "db/user.sqlite" }

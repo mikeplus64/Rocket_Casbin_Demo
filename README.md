@@ -1,23 +1,16 @@
 # rocket_casbin_demo
 
-Rocket rely on nightly.
+this is a template for rocket proj with casbin.
 
-`rustup default nightly`
+All you need to do is that rewrite the variables in [CasbinFairing](https://github.com/simoin/Rocket_Casbin_Demo/blob/1517ee67338049bdfa38d2240bfdabcd786ec25c/src/main.rs#L42)
+```rust
+fn on_request(&self, request: &mut Request<'r>, _data: &Data) {
+    let sub = String::from("alice");
+    let domain = None;
+    let res = request.uri().path().to_owned();
+    let action = request.method().as_str().to_owned();
+    let cloned_enforce = self.enforcer.clone();
 
-(optional)
-
-Init casbin policy database. I've created this in db folder.
-
-`cargo run --bin init_db`
-
-Run with file adapter.
-
-`cargo run --bin file_adapter`
-
-Or, run with diesel adapter
-
-`cargo run --bin orm_adapter`.
-
-Test
-
-get http://localhost:8000/user?name=alice
+    ...
+}
+```
