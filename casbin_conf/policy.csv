@@ -1,4 +1,4 @@
-p, bob, /login, GET
-p, admin, /user, GET
+p, bob, /pen, GET
+p, admin, /book/1, GET
 
 g, alice, admin

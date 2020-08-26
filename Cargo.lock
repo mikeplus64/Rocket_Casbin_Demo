@@ -272,7 +272,7 @@ dependencies = [
 [[package]]
 name = "diesel-adapter"
 version = "0.7.3"
-source = "git+http://192.168.1.103:8082/simoon/diesel-adapter.git#00000078e9f6dcd9b87f590213b2b8c193c5565b"
+source = "git+https://github.com/simoin/diesel-adapter.git#00000078e9f6dcd9b87f590213b2b8c193c5565b"
 dependencies = [
  "async-trait",
  "casbin",
