@@ -77,7 +77,7 @@ impl Fairing for CasbinFairing {
 
 #[get("/pen")]
 pub fn pen(_g: CasbinGuard) -> &'static str {
-    "book"
+    "pen"
 }
 
 #[get("/book/1")]
