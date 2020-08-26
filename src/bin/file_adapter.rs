@@ -11,10 +11,6 @@ use rocket::{
 };
 use rocket_contrib::database;
 
-#[database("my_sqlite")]
-#[derive(Debug)]
-pub struct DbConn(rocket_contrib::databases::diesel::SqliteConnection);
-
 pub struct User {
     name: String,
 }
